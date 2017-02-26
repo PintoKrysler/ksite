@@ -1,0 +1,87 @@
+$color_primary:#aaa;
+$color_font:#67666A;
+$color_secondary_dark:#FF9A61;
+
+a , a:hover{
+	color:$color_font;
+	text-decoration: none;
+}
+
+html , html body, .main_container, .main_container .row, .side_bar , .main_content{
+	height:100%;
+	font-family: 'Lato', sans-serif;
+	color:$color_font;
+}
+
+.main_content{
+	display: table;
+}
+
+.main_content .intro_cont, .side_bar .main_bar{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.intro_cont {
+	h1 {
+		font-size: 20vmin;
+		color: $color_primary;
+	}
+	h1:hover {
+		color: $color_secondary_dark;
+	}
+	h3{
+		max-width: 500px;
+		margin:auto;
+		color: $color_font;
+	}
+}
+
+.main_content {
+	.page{
+		height: 100vh;
+		width : 100%;
+		display: table;
+		h2{
+			color: $color_primary;
+		}
+		h2:hover{
+			color:$color_font;
+		}
+	}
+}
+
+.sidebar{
+	width: 100px;
+	height: 400px;
+}
+
+.row {
+	nav {
+		width: 10%;
+		height: 100vh;
+		display: table;
+		position: fixed;
+		font-size: 3vmin;
+		li{
+			text-align: center;
+			cursor:pointer;
+			color:$color_font;
+			margin:4vh;
+			.nav_icon:hover{
+				color:$color_secondary_dark;
+			}
+			.nav_icon.active{
+				color:$color_secondary_dark;
+			}
+		}
+		li:hover{
+			color:$color_secondary_dark;
+		}
+	}
+}
+
+.row nav ul{
+	display: table-cell;
+	vertical-align: middle;
+}
