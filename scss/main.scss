@@ -30,10 +30,11 @@ html , html body, .main_container, .main_container .row, .side_bar , .main_conte
 	h1:hover {
 		color: $color_secondary_dark;
 	}
-	h3{
+	h4{
 		max-width: 500px;
 		margin:auto;
 		color: $color_font;
+		line-height: 1.5;
 	}
 }
 
