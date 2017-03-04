@@ -1,6 +1,5 @@
-$color_primary:#aaa;
-$color_font:#67666A;
-$color_secondary_dark:#FF9A61;
+@import '_variables.scss';
+
 
 a , a:hover{
 	color:$color_font;
@@ -35,6 +34,16 @@ html , html body, .main_container, .main_container .row, .side_bar , .main_conte
 		margin:auto;
 		color: $color_font;
 		line-height: 1.5;
+
+		@media screen and (max-width: $break_small) {
+	    font-size: 4vw;
+	  }
+	  @media screen and (min-width: $break_medium) and (max-width: $break_large) {
+	    font-size: 2vw;
+	  }
+		@media screen and (min-width: $break_large) {
+	    font-size: 1.5vw;
+	  }
 	}
 }
 
@@ -85,4 +94,60 @@ html , html body, .main_container, .main_container .row, .side_bar , .main_conte
 .row nav ul{
 	display: table-cell;
 	vertical-align: middle;
+}
+
+#contact_section .content{
+	margin-top: 15%;
+	text-align: center;
+	.followme{
+		margin-top: 15%;
+	}
+	.emailme{
+		color: $color_secondary_dark;
+	}
+}
+#contact_section p{
+	font-size: 3vw;
+	color: #ccc;
+}
+
+#contact_section .followme span{
+	margin:10px;
+}
+
+// .circle {
+//     background: #f00;
+//     border-radius: 50%;
+// 		display: inline;
+// }
+.circle.advanced{
+	width: $advance_width;
+	height: $advance_width;
+}
+.circle.intermediate{
+	width: $intermediate_width;
+	height: $intermediate_width;
+}
+.circle.basic{
+	width: $basic_width;
+	height: $basic_width;
+}
+
+div.circle{
+	margin:5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(119,123,179,0.6);
+  color: black;
+  min-width: 1em;
+  border-radius: 50%;
+  vertical-align: middle;
+	opacity: 0.5;
+	//filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+div.circle:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
 }
