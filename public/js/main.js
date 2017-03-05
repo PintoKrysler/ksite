@@ -4,7 +4,7 @@ $('nav .nav_icon ').on('click',function(){
 });
 
 var skills=[];
-
+var positions = ['bottom','top','-webkit-baseline-middle'];
 skills.push({
   'name':'Javascript',
   'bgcolor':[249,225,33],
@@ -23,7 +23,7 @@ skills.push({
   'name':'PHP',
   'bgcolor':[119,123,179],
   'fontcolor':'',
-  'level':'intermediate',
+  'level':'advanced',
 });
 
 skills.push({
@@ -49,7 +49,7 @@ skills.push({
 
 skills.push({
   'name':'Oracle',
-  'bgcolor':[54,111,158],
+  'bgcolor':[237,28,36],
   'fontcolor':'',
   'level':'intermediate',
 });
@@ -79,14 +79,14 @@ skills.push({
   'name':'HTML5',
   'bgcolor':[228,77,38],
   'fontcolor':'',
-  'level':'intermediate',
+  'level':'advanced',
 });
 
 skills.push({
   'name':'CSS3',
   'bgcolor':[21,114,182],
   'fontcolor':'',
-  'level':'intermediate',
+  'level':'advanced',
 });
 
 skills.push({
@@ -96,12 +96,53 @@ skills.push({
   'level':'basic',
 });
 
-$('#skills_btn').on('click',function(){
-  for (var i = 0; i < skills.length; i++) {
-    var skill = skills[i];
-    var bg = skill.bgcolor;
-    var style='background-color:rgba('+bg[0]+','+bg[1]+','+bg[2]+',0.6)';
-    $('#skills_container').append('<div class="circle '+skill.level+'" style="'+style+'"">'+skill.name+'</div>');
-  }
-
+skills.push({
+  'name':'GIT',
+  'bgcolor':[240,80,51],
+  'fontcolor':'',
+  'level':'intermediate',
 });
+
+skills.push({
+  'name':'CodeIgniter',
+  'bgcolor':[221,72,20],
+  'fontcolor':'',
+  'level':'basic',
+});
+
+skills.push({
+  'name':'Phonegap',
+  'bgcolor':[39,161,197],
+  'fontcolor':'',
+  'level':'intermediate',
+});
+
+skills.push({
+  'name':'Assembly',
+  'bgcolor':[168,185,204],
+  'fontcolor':'',
+  'level':'advanced',
+});
+
+skills.push({
+  'name':'NodeJS',
+  'bgcolor':[127,189,66],
+  'fontcolor':'',
+  'level':'basic',
+});
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+$('#skills_btn').on('click',function(){});
+for (var i = 0; i < skills.length; i++) {
+  var skill = skills[i];
+  var bg = skill.bgcolor;
+  var max = positions.length-1;
+  var random_n = getRandomInt(0,max);
+  var random_pos = positions[random_n];
+
+  var style='background-color:rgba('+bg[0]+','+bg[1]+','+bg[2]+',0.6);vertical-align:'+random_pos;
+  $('#skills_container').append('<div class="circle '+skill.level+'" style="'+style+'"">'+skill.name+'</div>');
+}
