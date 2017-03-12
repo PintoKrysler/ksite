@@ -133,6 +133,24 @@ html , html body, .main_container, .main_container .row, .side_bar , .main_conte
 	height: $basic_width;
 }
 
+#legend_icons .circle.basic{
+	width: $basic_legend;
+	height: $basic_legend;
+}
+
+#legend_icons .circle.advanced{
+	margin: 0 5px;
+	width: $advanced_legend;
+	height: $advanced_legend;
+}
+
+.legend_label{
+	display: none;
+	background-color: $color_primary;
+	color: #fff;
+	padding: 	5px;
+}
+
 div.circle{
 	margin:5px;
   display: inline-flex;
@@ -145,6 +163,10 @@ div.circle{
   vertical-align: middle;
 	opacity: 0.5;
 	//filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+#legend_icons{
+	margin-bottom: 10px;
 }
 
 div.circle:hover {

@@ -131,11 +131,13 @@ skills.push({
   'level':'basic',
 });
 
+
+
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-$('#skills_btn').on('click',function(){});
+// Draw skills circles
 for (var i = 0; i < skills.length; i++) {
   var skill = skills[i];
   var bg = skill.bgcolor;
@@ -146,3 +148,18 @@ for (var i = 0; i < skills.length; i++) {
   var style='background-color:rgba('+bg[0]+','+bg[1]+','+bg[2]+',0.6);vertical-align:'+random_pos;
   $('#skills_container').append('<div class="circle '+skill.level+'" style="'+style+'"">'+skill.name+'</div>');
 }
+
+// Draw legend circles
+var style='background-color:rgba(168,185,204,0.6);';
+$('#legend_icons').append('<div class="circle basic" style="'+style+'"" data-label="BASIC"></div>');
+$('#legend_icons').append('<div class="circle advanced" style="'+style+'"" data-label="ADVANCED"></div>');
+
+$('#legend_icons .circle.basic , #legend_icons .circle.advanced').mouseenter(function(){
+  var label = $(this).data('label');
+  $('.legend_container .legend_label').html(label);
+  $('.legend_container .legend_label').fadeIn('slow');
+}).mouseleave(function(){
+
+  $('.legend_container .legend_label').fadeOut('slow');
+
+})
