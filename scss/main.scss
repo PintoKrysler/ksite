@@ -169,6 +169,13 @@ div.circle{
 	margin-bottom: 10px;
 }
 
+#personal_image .default_pic{
+	display: inline-block;
+}
+#personal_image .extra_pic{
+	display: none
+}
+
 div.circle:hover {
     opacity: 1.0;
     filter: alpha(opacity=100); /* For IE8 and earlier */

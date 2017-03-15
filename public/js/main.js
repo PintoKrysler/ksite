@@ -1,6 +1,7 @@
 $('nav .nav_icon ').on('click',function(){
   $('.nav_icon').removeClass('active');
   $(this).addClass('active')
+  stuffAppear()
 });
 
 var skills=[];
@@ -131,6 +132,28 @@ skills.push({
   'level':'basic',
 });
 
+var h1 = $('h1').text().split("")
+var h1Value = $('h1').text()
+h1.push(h1Value)
+
+
+function stuffAppear() {
+    var i;
+    for (i = 0; i < h1.length; i++) {
+        apperance(i);
+    }
+
+
+}
+function apperance(i) {
+    var x = h1[i];
+    setTimeout(function() {
+      $('h1').text(h1[i]).css({color:"#aaa"})
+    }, 1000 + i * 1500);
+}
+
+
+
 
 
 function getRandomInt(min, max) {
@@ -162,4 +185,17 @@ $('#legend_icons .circle.basic , #legend_icons .circle.advanced').mouseenter(fun
 
   $('.legend_container .legend_label').fadeOut('slow');
 
+})
+
+var num_pictures = 2;
+var rotate_image_index = 1;
+$('#personal_image .default_pic').mouseenter(function(){
+  $('#personal_image .default_pic').css('display','none');
+  var show_pic_index  = rotate_image_index % num_pictures;
+  $('#personal_image .extra_pic_'+show_pic_index).css('display','inline-block');
+  rotate_image_index++;
+})
+$('#personal_image .extra_pic').mouseleave(function(){
+  $('#personal_image .extra_pic').hide();
+  $('#personal_image .default_pic').css('display','inline-block');
 })
