@@ -142,9 +142,10 @@ function stuffAppear() {
     for (i = 0; i < h1.length; i++) {
         apperance(i);
     }
-
-
 }
+
+$('#sidebar').find('li:first a').addClass('active');
+
 function apperance(i) {
     var x = h1[i];
     setTimeout(function() {

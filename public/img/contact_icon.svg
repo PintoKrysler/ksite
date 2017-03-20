@@ -1,12 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="111px" height="109px" viewBox="0 0 111 109" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
-    <title>Slice 1</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M13.2753677,77.50158 L6.3596834,98.3266633 C5.1405652,101.997773 7.11947723,103.988434 10.7994073,102.766387 L30.8830241,96.0969323 C38.8242711,101.103346 48.2289639,104 58.3102066,104 C86.7528712,104 109.810207,80.9426646 109.810207,52.5 C109.810207,24.0573354 86.7528712,1 58.3102066,1 C29.867542,1 6.81020662,24.0573354 6.81020662,52.5 C6.81020662,61.5730727 9.15647311,70.0981455 13.2753677,77.50158 Z" id="Combined-Shape" stroke="#4A4A4A" stroke-width="3"></path>
-        <path d="M49,77 L79,77" id="Line" stroke="#4A4A4A" stroke-width="3" stroke-linecap="square"></path>
-        <polyline id="Triangle-2" stroke="#4A4A4A" stroke-width="3" points="27 37 47 57 47 57 27 77"></polyline>
-    </g>
+<svg width="111" height="109" viewBox="0 0 111 109">
+    <style>
+        .a {
+            stroke-width: 3;
+            stroke: #4A4A4A;
+        }
+    </style>
+    <g fill="none"><path d="M13.3 77.5L6.4 98.3C5.1 102 7.1 104 10.8 102.8L30.9 96.1C38.8 101.1 48.2 104 58.3 104 86.8 104 109.8 80.9 109.8 52.5 109.8 24.1 86.8 1 58.3 1 29.9 1 6.8 24.1 6.8 52.5 6.8 61.6 9.2 70.1 13.3 77.5Z" class="a"/><path d="M49 77L79 77" class="a"/><polyline points="27 37 47 57 47 57 27 77" class="a"/></g>
 </svg>

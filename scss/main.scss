@@ -91,6 +91,32 @@ html , html body, .main_container, .main_container .row, .side_bar , .main_conte
 	}
 }
 
+.home_icon_svg:hover , .nav_icon.active .home_icon_svg {
+		path{
+			stroke: $color_secondary_dark;
+			stroke-width:6;
+		}
+}
+.computer_icon_svg:hover , .nav_icon.active .computer_icon_svg{
+	rect {
+		stroke: $color_secondary_dark;
+
+	}
+	#Rectangle{
+		stroke-width:8;
+	}
+	path{
+		stroke: $color_secondary_dark;
+	}
+}
+
+.contact_icon_svg:hover , .nav_icon.active .contact_icon_svg{
+	path , polyline{
+		stroke: $color_secondary_dark;
+		stroke-width:6;
+	}
+}
+
 .row nav ul{
 	display: table-cell;
 	vertical-align: middle;
