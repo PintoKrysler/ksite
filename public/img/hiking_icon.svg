@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="343px" height="263px" viewBox="0 0 343 263" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(5.000000, 7.000000)" stroke="#4A4A4A">
+            <path d="M122.762599,182.984119 L211,0 L333,253 L120.5,253 L0,253 L76,71 L122.762599,182.984119 Z" id="Combined-Shape" stroke-width="6"></path>
+            <path d="M187.098364,51.8587098 L191.793922,97.5495567 L214.658668,78.2735281 L218.83939,88.531083 L247.023626,76.0854113 M226.898866,67.9544802 L226.898866,67.9544802 L226.911154,67.9441211" id="Combined-Shape" stroke-width="4"></path>
+            <polyline id="Triangle-3" stroke-width="4" transform="translate(79.362074, 123.375434) rotate(158.000000) translate(-79.362074, -123.375434) " points="63.2066762 137.745309 79.3620735 109.005559 79.3620735 109.005559 95.5174709 137.745309"></polyline>
+        </g>
+    </g>
+</svg>
