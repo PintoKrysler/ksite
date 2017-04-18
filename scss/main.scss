@@ -206,3 +206,42 @@ div.circle:hover {
     opacity: 1.0;
     filter: alpha(opacity=100); /* For IE8 and earlier */
 }
+
+.toggle_img_cont {
+	section , span , div{
+		display: none;
+	}
+	img{
+		-webkit-transition: opacity 1s ease-in-out;
+	  -moz-transition: opacity 1s ease-in-out;
+	  -o-transition: opacity 1s ease-in-out;
+	  transition: opacity 1s ease-in-out;
+	}
+}
+.toggle_img_cont:hover {
+
+	section , span , div{
+		display: block;
+
+		-webkit-transition: opacity 1s ease-in-out;
+	  -moz-transition: opacity 1s ease-in-out;
+	  -o-transition: opacity 1s ease-in-out;
+	  transition: opacity 1s ease-in-out;
+
+	}
+	section{
+		font-size: 7vw;
+	}
+	span{
+		@media screen and (max-width: $break_large) {
+			font-size: 2vw;
+		}
+		@media screen and (min-width: $break_large) {
+			font-size: 1vw;
+		}
+	}
+	img{
+		opacity: 0;
+		display:none;
+	}
+}
