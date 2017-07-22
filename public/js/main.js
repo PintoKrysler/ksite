@@ -1,11 +1,14 @@
-$('nav .nav_icon ').on('click',function(){
+$('nav .nav_icon ').on('click',()=>{
   $('.nav_icon').removeClass('active');
   $(this).addClass('active')
 //  stuffAppear()
 });
 
-var skills=[];
-var positions = ['bottom','top','-webkit-baseline-middle'];
+let skills              = [];
+let positions           = ['bottom','top','-webkit-baseline-middle'];
+var num_pictures        = 2;
+var rotate_image_index  = 1;
+
 skills.push({
   'name':'Javascript',
   'bgcolor':[249,225,33],
@@ -132,14 +135,12 @@ skills.push({
   'level':'basic',
 });
 
-var h1 = $('h1').text().split("")
-var h1Value = $('h1').text()
+let h1 = $('h1').text().split("")
+let h1Value = $('h1').text()
 h1.push(h1Value)
 
-
 function stuffAppear() {
-    var i;
-    for (i = 0; i < h1.length; i++) {
+    for (let i = 0; i < h1.length; i++) {
         apperance(i);
     }
 }
@@ -147,8 +148,8 @@ function stuffAppear() {
 $('#sidebar').find('li:first a').addClass('active');
 
 function apperance(i) {
-    var x = h1[i];
-    setTimeout(function() {
+    let x = h1[i];
+    setTimeout( ()=>{
       $('h1').text(h1[i]).css({color:"#aaa"})
     }, 1000 + i * 1500);
 }
@@ -162,14 +163,14 @@ function getRandomInt(min, max) {
 }
 
 // Draw skills circles
-for (var i = 0; i < skills.length; i++) {
-  var skill = skills[i];
-  var bg = skill.bgcolor;
-  var max = positions.length-1;
-  var random_n = getRandomInt(0,max);
-  var random_pos = positions[random_n];
+for (let i = 0; i < skills.length; i++) {
+  let skill = skills[i];
+  let bg = skill.bgcolor;
+  let max = positions.length-1;
+  let random_n = getRandomInt(0,max);
+  let random_pos = positions[random_n];
 
-  var style='background-color:rgba('+bg[0]+','+bg[1]+','+bg[2]+',0.6);vertical-align:'+random_pos;
+  let style='background-color:rgba('+bg[0]+','+bg[1]+','+bg[2]+',0.6);vertical-align:'+random_pos;
   $('#skills_container').append('<div class="circle '+skill.level+'" style="'+style+'"">'+skill.name+'</div>');
 }
 
@@ -178,25 +179,23 @@ var style='background-color:rgba(168,185,204,0.6);';
 $('#legend_icons').append('<div class="circle basic" style="'+style+'"" data-label="BASIC"></div>');
 $('#legend_icons').append('<div class="circle advanced" style="'+style+'"" data-label="ADVANCED"></div>');
 
-$('#legend_icons .circle.basic , #legend_icons .circle.advanced').mouseenter(function(){
+$('#legend_icons .circle.basic , #legend_icons .circle.advanced').mouseenter(()=>{
   var label = $(this).data('label');
   $('.legend_container .legend_label').html(label);
   $('.legend_container .legend_label').fadeIn('slow');
-}).mouseleave(function(){
+}).mouseleave(()=>{
 
   $('.legend_container .legend_label').fadeOut('slow');
 
 })
 
-var num_pictures = 2;
-var rotate_image_index = 1;
-$('#personal_image .default_pic').mouseenter(function(){
+$('#personal_image .default_pic').mouseenter(()=>{
   $('#personal_image .default_pic').css('display','none');
-  var show_pic_index  = rotate_image_index % num_pictures;
+  let show_pic_index  = rotate_image_index % num_pictures;
   $('#personal_image .extra_pic_'+show_pic_index).css('display','inline-block');
   rotate_image_index++;
 })
-$('#personal_image .extra_pic').mouseleave(function(){
+$('#personal_image .extra_pic').mouseleave(()=>{
   $('#personal_image .extra_pic').hide();
   $('#personal_image .default_pic').css('display','inline-block');
 })
